@@ -1,0 +1,22 @@
+version: "3"
+services:
+  selenium:
+    container_name: python-selenium-on-docker_selenium
+    image: selenium/standalone-firefox-debug:3.141.59
+    ports:
+      - 4444
+      - 5901:5900
+    volumes:
+      - /dev/shm:/dev/shm
+      - ./tempDownload:/home/seluser/Downloads
+  app:
+    container_name: python-selenium-on-docker_app
+    depends_on:
+      - selenium
+    build: ./app
+    volumes:
+      - ./app:/app
+      - ./tempDownload:/home/seluser/Downloads
+    environment:
+      SELENIUM_URL: http://selenium:4444/wd/hub
+    tty: true
