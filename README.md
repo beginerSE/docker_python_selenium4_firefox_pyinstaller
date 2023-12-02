@@ -35,5 +35,6 @@ WindowsユーザならRealVNCで動作確認済み。
 ## 変更点
 
 コンテナ内でダウンロードしたファイルは「tempDownload」に保存されます
-保存先を変更したい場合はDockerFileに編集してください
+
+保存先を変更したい場合はDockerFileを編集してください
 
