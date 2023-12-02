@@ -36,5 +36,5 @@ WindowsユーザならRealVNCで動作確認済み。
 
 コンテナ内でダウンロードしたファイルは「tempDownload」に保存されます
 
-保存先を変更したい場合はDockerFileを編集してください
+保存先を変更したい場合は「docker-compose.yml」を編集してください
 
